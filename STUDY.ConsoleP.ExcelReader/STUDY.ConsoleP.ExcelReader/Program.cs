@@ -12,7 +12,7 @@ public class Program
 
             DbPopulator.PopulateDatabase(data);
 
-            Console.WriteLine("Data has been read from Excel and populated into the database.");
+            Console.WriteLine("Data has been read0 from Excel and populated into the database.");
             Console.ReadLine();
         }
     }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mTDa3NoKMbggk17iOEKxHKrWcZCQ+5pa4zgynU53S4L2geRA7NLtNy/gBBs/2bSnhlP1pbhrSrp4k2FddUzZuw==",
+  "dgSpecHash": "Hahkvrxit12RUWCCcDUSxSEj/SEyf3yjnjIwAQWrlUVsEpJ8GQwgBIIKlXkY2mUUqfczGniFI1eis8BTpqnt2A==",
   "success": true,
-  "projectFilePath": "C:\\MEGA\\WIP\\01-GitClone\\STUDY.ConsoleP.ExcelReader\\STUDY.ConsoleP.ExcelReader\\STUDY.ConsoleP.ExcelReader\\STUDY.ConsoleP.ExcelReader.csproj",
+  "projectFilePath": "C:\\MEGA\\WIP\\02-GitWIP\\STUDY.ConsoleP.ExcelReader\\STUDY.ConsoleP.ExcelReader\\STUDY.ConsoleP.ExcelReader\\STUDY.ConsoleP.ExcelReader.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\duddn\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\duddn\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
