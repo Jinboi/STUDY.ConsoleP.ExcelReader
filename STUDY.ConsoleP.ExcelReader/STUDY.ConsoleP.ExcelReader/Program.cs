@@ -1,19 +1,16 @@
-﻿namespace STUDY.ConsoleP.ExcelReader;
+﻿using OfficeOpenXml;
+
+namespace STUDY.ConsoleP.ExcelReader;
 public class Program
 {
     static void Main(string[] args)
     {
         {
-            var workingDirectory = Directory.GetCurrentDirectory();
-            var excelFileName = "ExcelReaderData.xlsx"; 
-            var excelFilePath = Path.Combine(workingDirectory, excelFileName);
+            ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
 
-            var data = ExcelReader.ReadFromExcel(excelFilePath);
+            //create database
 
-            DbPopulator.PopulateDatabase(data);
-
-            Console.WriteLine("Data has been read0 from Excel and populated into the database.");
-            Console.ReadLine();
+            //create excel load
         }
     }
 }
