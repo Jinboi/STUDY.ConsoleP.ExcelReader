@@ -4,32 +4,41 @@ using STUDY.ConsoleP.ExcelReaderTryTwo;
 
 ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
 
+Console.WriteLine("Press Any Key To Create Database");
+Console.ReadLine();
+
 CreateDatabase();
 
-Console.WriteLine("Press Any Key To Continue");
+Console.WriteLine("Database Created");
+
+Console.WriteLine("Press Any Key To Load Excel Data");
 Console.ReadLine();
 
 var excelData = LoadExcelData();
 
+Console.WriteLine("Excel Data Loaded");
+
+Console.WriteLine("Press Any Key To Update Database");
+Console.ReadLine();
+
 UpdateDatabase(excelData);
 
-Console.WriteLine("Data added to the database.");
-Console.WriteLine("Press Any Key To Exit");
+Console.WriteLine("Database Updated");
 
+Console.WriteLine("Press Any Ket To Exit");
 Console.ReadLine();
 void CreateDatabase()
 {
     using (var context = new ExcelDbContext())
     {
-        if (!context.Database.CanConnect())
+        if (context.Database.CanConnect())
         {
-            context.Database.Migrate();
-            Console.WriteLine("Database migration complete.");
+            context.Database.EnsureDeleted();
+            Console.WriteLine("Existing database deleted.");
         }
-        else
-        {
-            Console.WriteLine("Database already exists.");
-        }
+
+        context.Database.Migrate();
+        Console.WriteLine("Database migration complete.");
     }
 }
 List<ExcelDbModel> LoadExcelData()
