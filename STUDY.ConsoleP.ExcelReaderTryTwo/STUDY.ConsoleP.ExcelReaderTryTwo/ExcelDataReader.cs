@@ -14,7 +14,6 @@ internal class ExcelDataReader
                 ExcelWorksheet worksheet = package.Workbook.Worksheets[0]; 
 
                 int rowCount = worksheet.Dimension.Rows;
-                int colCount = worksheet.Dimension.Columns;
 
                 for (int row = 2; row <= rowCount; row++) 
                 {                    
@@ -29,7 +28,10 @@ internal class ExcelDataReader
                                         
                     excelDataList.Add(excelData);
 
-                    Console.WriteLine($"First Name: {excelData.FirstName}, Last Name: {excelData.LastName}");
+                    Console.WriteLine(@$"
+                        First Name: {excelData.FirstName}, 
+                        Last Name: {excelData.LastName}
+                        ");
                 }
             }
         }

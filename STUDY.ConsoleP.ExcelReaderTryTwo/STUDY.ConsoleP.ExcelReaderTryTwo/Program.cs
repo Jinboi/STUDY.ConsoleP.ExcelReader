@@ -4,29 +4,46 @@ using STUDY.ConsoleP.ExcelReaderTryTwo;
 
 ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
 
-Console.WriteLine("Press Any Key To Create Database");
-Console.ReadLine();
+bool exit = false;
+while (!exit)   
+{
+    RunApplication();
 
-CreateDatabase();
+    Console.WriteLine("Press 'X' to exit or any other key to run again...");
+    if (Console.ReadKey().Key == ConsoleKey.X)
+    {
+        exit = true;
+    }
+    Console.WriteLine();
+}
+void RunApplication()
+{
+    Console.WriteLine("Press Any Key To Create Database");
+    Console.ReadLine();
 
-Console.WriteLine("Database Created");
+    try
+    {
+        CreateDatabase();
+        Console.WriteLine("Database Created");
 
-Console.WriteLine("Press Any Key To Load Excel Data");
-Console.ReadLine();
+        Console.WriteLine("Press Any Key To Load Excel Data");
+        Console.ReadLine();
 
-var excelData = LoadExcelData();
+        var excelData = LoadExcelData();
+        Console.WriteLine("Excel Data Loaded");
 
-Console.WriteLine("Excel Data Loaded");
+        Console.WriteLine("Press Any Key To Update Database");
+        Console.ReadLine();
 
-Console.WriteLine("Press Any Key To Update Database");
-Console.ReadLine();
+        UpdateDatabase(excelData);
+        Console.WriteLine("Database Updated");
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"An error occurred: {ex.Message}");
+    }
+}
 
-UpdateDatabase(excelData);
-
-Console.WriteLine("Database Updated");
-
-Console.WriteLine("Press Any Ket To Exit");
-Console.ReadLine();
 void CreateDatabase()
 {
     using (var context = new ExcelDbContext())
@@ -41,6 +58,7 @@ void CreateDatabase()
         Console.WriteLine("Database migration complete.");
     }
 }
+
 List<ExcelDbModel> LoadExcelData()
 {
     string fileName = "ExcelReaderData.xlsx";
@@ -49,6 +67,7 @@ List<ExcelDbModel> LoadExcelData()
 
     return reader.ReadExcelFile(filePath);
 }
+
 void UpdateDatabase(List<ExcelDbModel> excelData)
 {
     using (var context = new ExcelDbContext())

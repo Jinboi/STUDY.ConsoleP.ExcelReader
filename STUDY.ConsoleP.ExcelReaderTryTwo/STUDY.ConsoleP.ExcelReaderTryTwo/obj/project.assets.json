@@ -46,23 +46,6 @@
           }
         }
       },
-      "dotMorten.Microsoft.SqlServer.Types/2.5.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Data.SqlClient": "4.0.0",
-          "System.Memory": "4.5.4"
-        },
-        "compile": {
-          "lib/netstandard2.0/Microsoft.SqlServer.Types.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.SqlServer.Types.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
       "EPPlus/7.1.2": {
         "type": "package",
         "dependencies": {
@@ -1776,21 +1759,6 @@
         "azureicon.png",
         "lib/netstandard2.0/Azure.Identity.dll",
         "lib/netstandard2.0/Azure.Identity.xml"
-      ]
-    },
-    "dotMorten.Microsoft.SqlServer.Types/2.5.0": {
-      "sha512": "17ESUzxkY78MBV9sEMkSlI4/ijv700mo9E5JT8VtHvkhIjZrNGX1R3awh1S2pD/z6yxleHXT2FcXSvn2iQMJPg==",
-      "type": "package",
-      "path": "dotmorten.microsoft.sqlserver.types/2.5.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "dotmorten.microsoft.sqlserver.types.2.5.0.nupkg.sha512",
-        "dotmorten.microsoft.sqlserver.types.nuspec",
-        "lib/netstandard2.0/Microsoft.SqlServer.Types.dll",
-        "lib/netstandard2.0/Microsoft.SqlServer.Types.pdb",
-        "lib/netstandard2.0/Microsoft.SqlServer.Types.xml"
       ]
     },
     "EPPlus/7.1.2": {
@@ -4754,28 +4722,27 @@
       "EPPlus >= 7.1.2",
       "Microsoft.EntityFrameworkCore >= 8.0.5",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.5",
-      "Microsoft.EntityFrameworkCore.Tools >= 8.0.5",
-      "dotMorten.Microsoft.SqlServer.Types >= 2.5.0"
+      "Microsoft.EntityFrameworkCore.Tools >= 8.0.5"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Youngwoo\\.nuget\\packages\\": {},
+    "C:\\Users\\duddn\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Youngwoo\\Documents\\MEGA\\WIP\\02-WIP\\STUDY.ConsoleP.ExcelReader\\STUDY.ConsoleP.ExcelReaderTryTwo\\STUDY.ConsoleP.ExcelReaderTryTwo\\STUDY.ConsoleP.ExcelReaderTryTwo.csproj",
+      "projectUniqueName": "C:\\MEGA\\WIP\\01-GitClone\\STUDY.ConsoleP.ExcelReader\\STUDY.ConsoleP.ExcelReaderTryTwo\\STUDY.ConsoleP.ExcelReaderTryTwo\\STUDY.ConsoleP.ExcelReaderTryTwo.csproj",
       "projectName": "STUDY.ConsoleP.ExcelReaderTryTwo",
-      "projectPath": "C:\\Users\\Youngwoo\\Documents\\MEGA\\WIP\\02-WIP\\STUDY.ConsoleP.ExcelReader\\STUDY.ConsoleP.ExcelReaderTryTwo\\STUDY.ConsoleP.ExcelReaderTryTwo\\STUDY.ConsoleP.ExcelReaderTryTwo.csproj",
-      "packagesPath": "C:\\Users\\Youngwoo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Youngwoo\\Documents\\MEGA\\WIP\\02-WIP\\STUDY.ConsoleP.ExcelReader\\STUDY.ConsoleP.ExcelReaderTryTwo\\STUDY.ConsoleP.ExcelReaderTryTwo\\obj\\",
+      "projectPath": "C:\\MEGA\\WIP\\01-GitClone\\STUDY.ConsoleP.ExcelReader\\STUDY.ConsoleP.ExcelReaderTryTwo\\STUDY.ConsoleP.ExcelReaderTryTwo\\STUDY.ConsoleP.ExcelReaderTryTwo.csproj",
+      "packagesPath": "C:\\Users\\duddn\\.nuget\\packages\\",
+      "outputPath": "C:\\MEGA\\WIP\\01-GitClone\\STUDY.ConsoleP.ExcelReader\\STUDY.ConsoleP.ExcelReaderTryTwo\\STUDY.ConsoleP.ExcelReaderTryTwo\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Youngwoo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\duddn\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -4820,10 +4787,6 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[8.0.5, )"
-          },
-          "dotMorten.Microsoft.SqlServer.Types": {
-            "target": "Package",
-            "version": "[2.5.0, )"
           }
         },
         "imports": [
